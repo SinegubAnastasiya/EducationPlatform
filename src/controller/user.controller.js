@@ -5,7 +5,8 @@ const {
     createUser,
     getAllUsers,
     getUserById, 
-    updateUserById
+    updateUserById,
+    deleteUser
 } = require('../service/user.service')
 
 route.post('/', async (req, res) => {
@@ -48,9 +49,10 @@ route.put('/:id', async (req, res) => {
     }
 })
 
-route.delete('/', async (req, res) => {
+route.delete('/:id', async (req, res) => {
     try {
-        const data = await getAllUsers()
+        const { id } = req.params
+        const data = await deleteUser(id)
         buildResponse(res, 200, data)
     } catch (error) {
         buildResponse(res, 404, error.message)

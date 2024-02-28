@@ -30,10 +30,10 @@ async function updateUserByIdDB(id, name, surname, email, pwd) {
     return rows
 }
 
-async function getAllUsersDB() {
+async function deleteUserDB(id) {
     const client = await pool.connect()
-    const sql = 'SELECT * FROM users'
-    const { rows } = await client.query(sql)
+    const sql = 'DELETE FROM users WHERE id = $1 RETURNING *'
+    const { rows } = await client.query(sql, [id])
     return rows
 }
 
@@ -41,5 +41,6 @@ module.exports = {
     getAllUsersDB,
     createUserDB,
     getUserByIdDB,
-    updateUserByIdDB
+    updateUserByIdDB,
+    deleteUserDB
 }
