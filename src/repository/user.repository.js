@@ -19,14 +19,14 @@ async function getUserByIdDB(id) {
     const client = await pool.connect()
     const sql = 'SELECT * FROM users WHERE id = $1'
     const { rows } = await client.query(sql, [id])
-    
+
     return rows
 }
 
-async function getAllUsersDB() {
+async function updateUserByIdDB(id, name, surname, email, pwd) {
     const client = await pool.connect()
-    const sql = 'SELECT * FROM users'
-    const { rows } = await client.query(sql)
+    const sql = 'UPDATE users SET name = $1, surname = $2, email = $3, pwd = $4 WHERE id = $5 RETURNING *'
+    const { rows } = await client.query(sql, [name, surname, email, pwd, id])
     return rows
 }
 
@@ -40,5 +40,6 @@ async function getAllUsersDB() {
 module.exports = {
     getAllUsersDB,
     createUserDB,
-    getUserByIdDB
+    getUserByIdDB,
+    updateUserByIdDB
 }
