@@ -15,7 +15,30 @@ async function getAllUsersDB() {
     return rows
 }
 
+async function getUserByIdDB(id) {
+    const client = await pool.connect()
+    const sql = 'SELECT * FROM users WHERE id = $1'
+    const { rows } = await client.query(sql, [id])
+    
+    return rows
+}
+
+async function getAllUsersDB() {
+    const client = await pool.connect()
+    const sql = 'SELECT * FROM users'
+    const { rows } = await client.query(sql)
+    return rows
+}
+
+async function getAllUsersDB() {
+    const client = await pool.connect()
+    const sql = 'SELECT * FROM users'
+    const { rows } = await client.query(sql)
+    return rows
+}
+
 module.exports = {
     getAllUsersDB,
-    createUserDB
+    createUserDB,
+    getUserByIdDB
 }
