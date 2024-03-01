@@ -59,7 +59,7 @@ async function deleteUserDB(id: number): Promise<iUser[]> {
     try {
         await client.query('BEGIN')
 
-        const sql: string = 'DELETE FROM users WHERE id: number = $1 RETURNING *'
+        const sql: string = 'DELETE FROM users WHERE id = $1 RETURNING *'
         const { rows } = await client.query(sql, [id])
 
         await client.query('COMMIT')
