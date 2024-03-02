@@ -1,5 +1,5 @@
-function buildResponse (res, status, body) {
-    res.status(status).send(body)
+function buildResponse(res, status, body) {
+  res.status(status).send(body);
 }
 
-export { buildResponse }
+export { buildResponse };
