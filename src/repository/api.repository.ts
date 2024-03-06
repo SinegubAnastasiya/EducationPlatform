@@ -13,9 +13,11 @@ async function userRegDB(name: string, surname: string, email: string, pwd: stri
     await client.query('COMMIT');
 
     return rows;
-  } catch (error) {
+  } catch (error: any) {
     await client.query('ROLLBACK');
     return [];
+  } finally {
+    client.release();
   }
 }
 

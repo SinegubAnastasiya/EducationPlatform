@@ -18,7 +18,7 @@ async function userAuth(email: string, pwd: string): Promise<iUser[]> {
   const user: iUser[] = await findUserByEmailDB(email);
   if (!user.length) throw new Error('Such user does not exist');
 
-  const comparePwd = await bcrypt.compare(pwd, user[0].pwd);
+  const comparePwd: boolean = await bcrypt.compare(pwd, user[0].pwd);
   if (!comparePwd) throw new Error('Wrong password');
 
   return user;

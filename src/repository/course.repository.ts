@@ -18,20 +18,22 @@ async function createCoursesDB(course: string, description: string): Promise<iCo
     console.log(error.message);
 
     return [];
+  } finally {
+    client.release();
   }
 }
 
 async function getAllCoursesDB(): Promise<iCourse[]> {
   const client = await pool.connect();
 
-  const sql = 'SELECT * FROM courses ORDER BY id ASC';
+  const sql: string = 'SELECT * FROM courses ORDER BY id ASC';
   const { rows } = await client.query(sql);
   return rows;
 }
 
 async function getCourseByIdDB(id: number): Promise<iCourse[]> {
   const client = await pool.connect();
-  const sql = 'SELECT * FROM courses WHERE id = $1';
+  const sql: string = 'SELECT * FROM courses WHERE id = $1';
   const { rows } = await client.query(sql, [id]);
   return rows;
 }
@@ -41,15 +43,17 @@ async function updateCoursesDB(id: number, course: string, description: string):
   try {
     await client.query('BEGIN');
 
-    const sql = 'UPDATE courses SET course = $1, description = $2 WHERE id = $3 RETURNING *';
+    const sql: string = 'UPDATE courses SET course = $1, description = $2 WHERE id = $3 RETURNING *';
     const { rows } = await client.query(sql, [course, description, id]);
 
     await client.query('COMMIT');
 
     return rows;
-  } catch (error) {
+  } catch (error: any) {
     await client.query('ROLLBACK');
     return [];
+  } finally {
+    client.release();
   }
 }
 
@@ -58,15 +62,17 @@ async function deleteCoursesDB(id: number): Promise<iCourse[]> {
   try {
     await client.query('BEGIN');
 
-    const sql = 'DELETE FROM courses WHERE id = $1 RETURNING *';
+    const sql: string = 'DELETE FROM courses WHERE id = $1 RETURNING *';
     const { rows } = await client.query(sql, [id]);
 
     await client.query('COMMIT');
 
     return rows;
-  } catch (error) {
+  } catch (error: any) {
     await client.query('ROLLBACK');
     return [];
+  } finally {
+    client.release();
   }
 }
 

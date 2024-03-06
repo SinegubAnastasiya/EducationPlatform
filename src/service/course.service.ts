@@ -1,4 +1,4 @@
-import { iCourse, iUser } from '../interfaces';
+import { iCourse } from '../interfaces';
 import { createCoursesDB, getAllCoursesDB, updateCoursesDB, deleteCoursesDB, getCourseByIdDB } from '../repository/course.repository';
 
 async function createCourses(course: string, description: string): Promise<iCourse[]> {
