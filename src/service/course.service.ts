@@ -3,7 +3,7 @@ import { createCoursesDB, getAllCoursesDB, updateCoursesDB, deleteCoursesDB, get
 
 async function createCourses(course: string, description: string): Promise<iCourse[]> {
   const data: iCourse[] = await createCoursesDB(course, description);
-  if (!data.length) throw new Error('Array is empty');
+  if (!data.length) throw new Error('The database does not created');
   return data;
 }
 
@@ -15,13 +15,13 @@ async function getAllCourses(): Promise<iCourse[]> {
 
 async function updateCourses(id: number, course: string, description: string): Promise<iCourse[]> {
   const data: iCourse[] = await updateCoursesDB(id, course, description);
-  if (!data.length) throw new Error('Array is empty');
+  if (!data.length) throw new Error('Data is not saved');
   return data;
 }
 
 async function deleteCourses(id: number): Promise<iCourse[]> {
   const data: iCourse[] = await deleteCoursesDB(id);
-  if (!data.length) throw new Error('Array is empty');
+  if (!data.length) throw new Error('Such data not found');
   return data;
 }
 
