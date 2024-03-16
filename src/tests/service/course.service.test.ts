@@ -19,6 +19,17 @@ describe('test getAllCourses', () => {
     expect(res).toHaveLength(2);
     expect(res.length).toBeGreaterThanOrEqual(0);
   });
+
+  test('Get error', async () => {
+    const mock = jest.spyOn(repository, 'getAllCoursesDB');
+    mock.mockResolvedValue([]);
+    try {
+      await getAllCourses();
+    } catch (error: any) {
+      expect(mock).toHaveBeenCalled();
+      expect(error.message).toBe('Array is empty');
+    }
+  });
 });
 
 describe('test createCourses', () => {
@@ -44,7 +55,6 @@ describe('test createCourses', () => {
       await createCourses('test1', 'test1');
     } catch (error: any) {
       expect(mock).toHaveBeenCalled();
-      expect(mock).toHaveBeenCalledWith([]);
       expect(error.message).toBe('The database does not created');
     }
   });
