@@ -76,6 +76,17 @@ describe('test updateCourses', () => {
     expect(res[0].course).toBe('updated');
     expect(res[0].description).toBe('updated');
   });
+
+  test('Get error', async () => {
+    const mock = jest.spyOn(repository, 'updateCoursesDB');
+    mock.mockResolvedValue([]);
+    try {
+      await updateCourses(1, 'updated', 'uodated');
+    } catch (error: any) {
+      expect(mock).toHaveBeenCalled();
+      expect(error.message).toBe('Data is not saved');
+    }
+  });
 });
 
 describe('test deleteCourses', () => {
