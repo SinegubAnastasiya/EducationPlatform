@@ -4,7 +4,7 @@ import { getAllUsersDB, createUserDB, getUserByIdDB, updateUserByIdDB, deleteUse
 
 async function createUser(name: string, surname: string, email: string, pwd: string): Promise<iUser[]> {
   const user: iUser[] = await createUserDB(name, surname, email, pwd);
-  if (!user.length) throw new Error('Data does not create');
+  if (!user.length) throw new Error('Data do not create');
   return user;
 }
 
@@ -26,13 +26,13 @@ async function updateUserById(id: number, name: string, surname: string, email: 
 }
 async function deleteUser(id: number): Promise<iUser[]> {
   const data: iUser[] = await deleteUserDB(id);
-  if (!data.length) throw new Error('Id not found');
+  if (!data.length) throw new Error('Id is not found');
   return data;
 }
 
 async function updateBody(id: number, body: iUser): Promise<iUser[]> {
   const data: iUser[] = await updateBodyDB(id, body);
-  if (!data.length) throw new Error('Data does not saved');
+  if (!data.length) throw new Error('Data is not changed');
   return data;
 }
 
