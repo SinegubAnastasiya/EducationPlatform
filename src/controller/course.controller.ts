@@ -17,6 +17,8 @@ route.post('/', async (req: Request, res: Response) => {
 route.get('/', async (req: Request, res: Response) => {
   try {
     const data: iCourse[] = await getAllCourses();
+    console.log('+');
+
     buildResponse(res, 200, data);
   } catch (error: any) {
     buildResponse(res, 404, error.message);
