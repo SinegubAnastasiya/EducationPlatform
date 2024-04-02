@@ -9,7 +9,7 @@
   "parserOptions": {
     "ecmaVersion": 2021,
     "sourceType": "module",
-    "project": "./tsconfig.json"
+    "project": "./server/tsconfig.json"
   },
   "rules": {
     "@typescript-eslint/explicit-module-boundary-types": "off",
