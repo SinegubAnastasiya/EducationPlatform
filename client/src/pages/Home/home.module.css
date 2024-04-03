@@ -45,7 +45,7 @@
     margin-top: 24px;
     width: 500px;
     height: 201px;
-    font: 400 56px Montserrat;
+    font: 800 56px Montserrat;
     color: #000000;
 }
 
@@ -65,3 +65,97 @@
     height: 601px;
     margin-top: 108px;
 }
+
+.main button {
+    font: 700 16px Montserrat;
+    color: #2B788B;
+    padding: 14px 22px;
+    gap: 19px;
+    border-radius: 100px;
+    background: #C3DCE3;
+    margin-top: 32px;
+}
+
+.main .statist {
+    width: 163px;
+    margin-top: 48px;
+}
+
+.main .statist .num {
+    display: flex;
+    height: 30px;
+}
+
+.main .statist .lights_img {
+    background-image: url('./assets/Vector.svg');
+    width: 24px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.main .statist .num p {
+    width: 129px;
+    font: 700 40px Montserrat;
+    color: #000000;
+}
+
+.main .statist p {
+    font: 600 16px Montserrat;
+    margin-left: 46px;
+    margin-top: 3px;
+}
+
+.section_games {
+    display: flex;
+    justify-content: space-between;
+    height: 600px;
+}
+
+.section_games .yoga_img {
+    background-image: url('./assets/image\ 8.svg');
+    width: 580px;
+    height: 445px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.section_games .game_kinds {
+    padding-top: 30px;
+}
+
+.section_games .game_kinds h1 {
+    width: 480px;
+    height: 96px;
+    font: 800 48px Montserrat;
+}
+
+.section_games .game_kinds p {
+    font: 600 18px Montserrat;
+    color: #757575;
+    width: 480px;
+    height: 50px;
+    margin-top: 30px;
+}
+
+.section_games .game_kinds .pictures {
+    display: flex;
+    gap: 21px;
+    margin-top: 30px;
+}
+
+.section_games .pictures .pic_1 {
+    background-image: url('./assets/Group\ 11.svg');
+    width: 131px;
+    height: 145px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.section_games .pictures .pic_2 {
+    background-image: url('./assets/Group\ 10.svg');
+    width: 172px;
+    height: 145px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
