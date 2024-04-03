@@ -166,7 +166,8 @@
     gap: 25px;
 }
 
-.section_practice .div {
+.section_practice .div,
+.section_statistics .progress {
     margin: auto;
 }
 
@@ -174,17 +175,19 @@
     width: 474px;
     height: 96px;
     font: 800 48px Montserrat;
+    margin-bottom: 30px;
 }
 
-.section_practice p {
+.section_practice p, 
+.section_statistics .progress p {
     font: 600 18px Montserrat;
     width: 397px;
     height: 50px;
     color: #757575;
-    margin-top: 30px;
 }
 
-.section_practice button {
+.section_practice button,
+.section_statistics button {
     font: 700 16px Montserrat;
     color: #2B788B;
     padding: 14px 22px;
@@ -200,4 +203,26 @@
     background-repeat: no-repeat;
     background-size: contain;
     margin: auto;
+}
+
+.section_statistics {
+    display: flex;
+    justify-content: space-between;
+    height: 600px;
+}
+
+.section_statistics .people_img {
+    background-image: url('./assets/image\ 1.svg');
+    width: 680px;
+    height: 409px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: auto;
+}
+
+.section_statistics .progress h1 {
+    width: 474px;
+    height: 144px;
+    font: 800 48px Montserrat;
+    margin-bottom: 30px;
 }

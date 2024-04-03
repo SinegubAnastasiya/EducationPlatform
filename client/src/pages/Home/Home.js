@@ -52,6 +52,17 @@ function Home() {
 
             <div className = {style.girl_img}></div>
         </div>
+
+        <div className = {style.section_statistics}>
+            <div className = {style.people_img}></div>
+
+            <div className= {style.progress}>
+                <h1>Watch your progress every day</h1>
+                <p>Save statistics on your achievements and mistakes</p>
+                <button>Statistics →</button>
+            </div>
+
+        </div>
     </div>
 }
 
