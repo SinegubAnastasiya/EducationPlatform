@@ -42,6 +42,16 @@ function Home() {
                 </div>
             </div>
         </div>
+
+        <div className = {style.section_practice}>
+            <div className= {style.div}>
+                <h1>Increase your knowledge</h1>
+                <p>Traditional and new effective approaches to learning languages</p>
+                <button>Textbook</button>
+            </div>
+
+            <div className = {style.girl_img}></div>
+        </div>
     </div>
 }
 

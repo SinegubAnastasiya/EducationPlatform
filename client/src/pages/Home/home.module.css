@@ -159,3 +159,45 @@
     background-size: contain;
 }
 
+.section_practice {
+    display: flex;
+    height: 500px;
+    background: #F6F5F4;
+    gap: 25px;
+}
+
+.section_practice .div {
+    margin: auto;
+}
+
+.section_practice h1 {
+    width: 474px;
+    height: 96px;
+    font: 800 48px Montserrat;
+}
+
+.section_practice p {
+    font: 600 18px Montserrat;
+    width: 397px;
+    height: 50px;
+    color: #757575;
+    margin-top: 30px;
+}
+
+.section_practice button {
+    font: 700 16px Montserrat;
+    color: #2B788B;
+    padding: 14px 22px;
+    border-radius: 100px;
+    background: #C3DCE3;
+    margin-top: 34px;
+}
+
+.section_practice .girl_img {
+    background-image: url('./assets/image\ 2.svg');
+    width: 425px;
+    height: 474px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: auto;
+}
