@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: #F6F5F4; 
 }
 
 .header p {
@@ -13,7 +14,7 @@
     height: 43px;
     font: 700 16px Montserrat;
     color: #000000;
-    background-color: white;
+    background: #F6F5F4;
     border-width: 0;
 }
 
@@ -26,11 +27,13 @@
     background-color: #2B788B;
     color: white;
     border-width: 0;
+    margin-left: 24px;
 }
 
 .main {
     display: flex;
     justify-content: space-between;
+    background: #F6F5F4;
 }
 
 .main h5 {
@@ -77,32 +80,22 @@
 }
 
 .main .statist {
-    width: 163px;
-    margin-top: 48px;
-}
-
-.main .statist .num {
     display: flex;
-    height: 30px;
+    justify-content: flex-start;
+    align-items: baseline;
 }
 
 .main .statist .lights_img {
     background-image: url('./assets/Vector.svg');
     width: 24px;
+    height: 30px;
     background-repeat: no-repeat;
     background-size: contain;
 }
 
-.main .statist .num p {
-    width: 129px;
-    font: 700 40px Montserrat;
-    color: #000000;
-}
-
 .main .statist p {
-    font: 600 16px Montserrat;
-    margin-left: 46px;
-    margin-top: 3px;
+    font: 800 40px Montserrat;
+    color: #000000;
 }
 
 .section_games {
@@ -178,7 +171,7 @@
     margin-bottom: 30px;
 }
 
-.section_practice p, 
+.section_practice p,
 .section_statistics .progress p {
     font: 600 18px Montserrat;
     width: 397px;
@@ -225,4 +218,65 @@
     height: 144px;
     font: 800 48px Montserrat;
     margin-bottom: 30px;
+}
+
+.footer .navigation,
+.footer .left_side,
+.footer .right_side,
+.icons,
+.left_icon {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer {
+    padding-top: 40px;
+    height: 160px;
+    background: #F6F5F4;
+}
+
+.footer .left_side,
+.footer .right_side {
+    font: 600 14px Montserrat;
+    color: #757575;
+}
+
+.footer .line {
+    width: 1220px;
+    border: 1.2px;
+    opacity: 0px;
+    border: 1.2px solid #E0E0E0;
+    margin-top: 20px;
+    margin-bottom: 24px;
+}
+
+.face,
+.img_GT,
+.youtube {
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.left_icon .face {
+    background-image: url('./assets/face.svg');
+    width: 25px;
+    height: 20px;
+}
+
+.left_icon .img_GT {
+    background-image: url('./assets/GT.svg');
+    width: 28px;
+    height: 19px;
+}
+
+.left_icon .youtube {
+    background-image: url('./assets/youtube.svg');
+    width: 25px;
+    height: 18px;
+}
+
+.icons p {
+    font: 600 12px Montserrat;
+    color: #757575;
 }
