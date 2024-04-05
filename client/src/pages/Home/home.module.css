@@ -1,6 +1,26 @@
-.header {
+.header,
+.main,
+.section_games,
+.section_statistics {
     display: flex;
     justify-content: space-between;
+}
+
+.main .student_img,
+.main .statist .lights_img,
+.section_games .yoga_img,
+.section_games .pictures .pic_1,
+.section_games .pictures .pic_2,
+.section_practice .girl_img,
+.section_statistics .people_img,
+.face,
+.img_GT,
+.youtube {
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.header {
     align-items: center;
     background: #F6F5F4; 
 }
@@ -31,8 +51,6 @@
 }
 
 .main {
-    display: flex;
-    justify-content: space-between;
     background: #F6F5F4;
 }
 
@@ -62,8 +80,6 @@
 
 .main .student_img {
     background-image: url('./assets/chel.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
     width: 740px;
     height: 601px;
     margin-top: 108px;
@@ -89,8 +105,6 @@
     background-image: url('./assets/Vector.svg');
     width: 24px;
     height: 30px;
-    background-repeat: no-repeat;
-    background-size: contain;
 }
 
 .main .statist p {
@@ -99,8 +113,6 @@
 }
 
 .section_games {
-    display: flex;
-    justify-content: space-between;
     height: 600px;
 }
 
@@ -108,12 +120,12 @@
     background-image: url('./assets/image\ 8.svg');
     width: 580px;
     height: 445px;
-    background-repeat: no-repeat;
-    background-size: contain;
+    margin: auto;
 }
 
 .section_games .game_kinds {
     padding-top: 30px;
+    margin: 80px;
 }
 
 .section_games .game_kinds h1 {
@@ -140,16 +152,12 @@
     background-image: url('./assets/Group\ 11.svg');
     width: 131px;
     height: 145px;
-    background-repeat: no-repeat;
-    background-size: contain;
 }
 
 .section_games .pictures .pic_2 {
     background-image: url('./assets/Group\ 10.svg');
     width: 172px;
     height: 145px;
-    background-repeat: no-repeat;
-    background-size: contain;
 }
 
 .section_practice {
@@ -193,14 +201,10 @@
     background-image: url('./assets/image\ 2.svg');
     width: 425px;
     height: 474px;
-    background-repeat: no-repeat;
-    background-size: contain;
     margin: auto;
 }
 
 .section_statistics {
-    display: flex;
-    justify-content: space-between;
     height: 600px;
 }
 
@@ -208,8 +212,6 @@
     background-image: url('./assets/image\ 1.svg');
     width: 680px;
     height: 409px;
-    background-repeat: no-repeat;
-    background-size: contain;
     margin: auto;
 }
 
@@ -248,13 +250,6 @@
     border: 1.2px solid #E0E0E0;
     margin-top: 20px;
     margin-bottom: 24px;
-}
-
-.face,
-.img_GT,
-.youtube {
-    background-repeat: no-repeat;
-    background-size: contain;
 }
 
 .left_icon .face {
