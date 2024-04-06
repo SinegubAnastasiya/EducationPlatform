@@ -1,0 +1,29 @@
+.wrapper {
+    .courses {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 23px 0;
+        border-radius: 14px;
+        background: #FFFFFF;
+
+        .icon {
+            background-image: url('./assets/icon.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 28px;
+            height: 24px;
+        }
+
+        h1 {
+            width: 125px;
+            height: 26px;
+            font: 800 26px Montserrat;
+            color: #000000;
+        }
+    }
+
+    background-color: #F6F5F4;
+}
+

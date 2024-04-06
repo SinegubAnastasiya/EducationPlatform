@@ -1,0 +1,33 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #F6F5F4; 
+    max-width: 1220px;
+    margin: auto;
+}
+
+.header p {
+    font: 700 16px Montserrat;
+    color: #000000;
+}
+
+.header .btn_log {
+    height: 43px;
+    font: 700 16px Montserrat;
+    color: #000000;
+    background: #F6F5F4;
+    border-width: 0;
+}
+
+.header .btn_sign {
+    width: 110px;
+    height: 43px;
+    padding: 13px 21px;
+    border-radius: 14px;
+    font: 700 16px Montserrat;
+    background-color: #2B788B;
+    color: white;
+    border-width: 0;
+    margin-left: 24px;
+}

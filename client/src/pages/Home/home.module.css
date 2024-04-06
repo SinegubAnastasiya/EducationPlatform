@@ -1,9 +1,10 @@
-.header,
 .main,
 .section_games,
 .section_statistics {
     display: flex;
     justify-content: space-between;
+    max-width: 1220px;
+    margin: auto;
 }
 
 .main .student_img,
@@ -12,42 +13,9 @@
 .section_games .pictures .pic_1,
 .section_games .pictures .pic_2,
 .section_practice .girl_img,
-.section_statistics .people_img,
-.face,
-.img_GT,
-.youtube {
+.section_statistics .people_img {
     background-repeat: no-repeat;
     background-size: contain;
-}
-
-.header {
-    align-items: center;
-    background: #F6F5F4; 
-}
-
-.header p {
-    font: 700 16px Montserrat;
-    color: #000000;
-}
-
-.header .btn_log {
-    height: 43px;
-    font: 700 16px Montserrat;
-    color: #000000;
-    background: #F6F5F4;
-    border-width: 0;
-}
-
-.header .btn_sign {
-    width: 110px;
-    height: 43px;
-    padding: 13px 21px;
-    border-radius: 14px;
-    font: 700 16px Montserrat;
-    background-color: #2B788B;
-    color: white;
-    border-width: 0;
-    margin-left: 24px;
 }
 
 .main {
@@ -165,6 +133,8 @@
     height: 500px;
     background: #F6F5F4;
     gap: 25px;
+    max-width: 1220px;
+    margin: auto;
 }
 
 .section_practice .div,
@@ -220,57 +190,4 @@
     height: 144px;
     font: 800 48px Montserrat;
     margin-bottom: 30px;
-}
-
-.footer .navigation,
-.footer .left_side,
-.footer .right_side,
-.icons,
-.left_icon {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-}
-
-.footer {
-    padding-top: 40px;
-    height: 160px;
-    background: #F6F5F4;
-}
-
-.footer .left_side,
-.footer .right_side {
-    font: 600 14px Montserrat;
-    color: #757575;
-}
-
-.footer .line {
-    width: 1220px;
-    border: 1.2px;
-    border: 1.2px solid #E0E0E0;
-    margin-top: 20px;
-    margin-bottom: 24px;
-}
-
-.left_icon .face {
-    background-image: url('./assets/face.svg');
-    width: 25px;
-    height: 20px;
-}
-
-.left_icon .img_GT {
-    background-image: url('./assets/GT.svg');
-    width: 28px;
-    height: 19px;
-}
-
-.left_icon .youtube {
-    background-image: url('./assets/youtube.svg');
-    width: 25px;
-    height: 18px;
-}
-
-.icons p {
-    font: 600 12px Montserrat;
-    color: #757575;
 }

@@ -1,0 +1,61 @@
+.footer .navigation,
+.footer .left_side,
+.footer .right_side,
+.icons,
+.left_icon {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.face,
+.img_GT,
+.youtube {
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.footer {
+    padding-top: 40px;
+    height: 160px;
+    background: #F6F5F4;
+    max-width: 1220px;
+    margin: auto;
+}
+
+.footer .left_side,
+.footer .right_side {
+    font: 600 14px Montserrat;
+    color: #757575;
+}
+
+.footer .line {
+    width: 1220px;
+    border: 1.2px;
+    border: 1.2px solid #E0E0E0;
+    margin-top: 20px;
+    margin-bottom: 24px;
+}
+
+.left_icon .face {
+    background-image: url('./assets/face.svg');
+    width: 25px;
+    height: 20px;
+}
+
+.left_icon .img_GT {
+    background-image: url('./assets/GT.svg');
+    width: 28px;
+    height: 19px;
+}
+
+.left_icon .youtube {
+    background-image: url('./assets/youtube.svg');
+    width: 25px;
+    height: 18px;
+}
+
+.icons p {
+    font: 600 12px Montserrat;
+    color: #757575;
+}
