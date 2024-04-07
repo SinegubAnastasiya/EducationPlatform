@@ -1,5 +1,9 @@
+.background {
+    background-color: #F6F5F4;
+}
+
 .wrapper {
-    .courses {
+    .title_courses {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -7,6 +11,7 @@
         padding: 23px 0;
         border-radius: 14px;
         background: #FFFFFF;
+        margin-bottom: 40px;
 
         .icon {
             background-image: url('./assets/icon.svg');
@@ -23,7 +28,59 @@
             color: #000000;
         }
     }
-
-    background-color: #F6F5F4;
 }
 
+.section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 926px;
+    height: 216px;
+    border-radius: 14px;
+    background: #FFFFFF;
+    margin: auto;
+    margin-bottom: 40px;
+
+    .image_1,
+    .image_2,
+    .image_3 {
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 337px;
+        height: 216px;
+        border-radius: 14px 0px 0px 14px;
+    }
+
+    .image_1 {
+        background-image: url('./assets/JS.png')
+    }
+
+    .image_2 {
+        background-image: url('./assets/TS.png')
+    }
+
+    .image_3 {
+        background-image: url('./assets/JS.png')
+    }
+
+    h1 {
+        width: 209px;
+        height: 32px;
+        font: 600 32px Montserrat;
+        color: #000000;
+        margin: 0 auto;
+    }
+
+    .baseline {
+        height: 1px;
+        width: 530px;
+        background: #E0E0E0;
+        margin: 20px 15px 12px 0;
+    }
+
+    p {
+        width: 516px;
+        font: 500 16px Montserrat;
+        color: #757575;
+    }
+}

@@ -1,8 +1,11 @@
+.section_1 {
+    background-color: #F6F5F4;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #F6F5F4; 
     max-width: 1220px;
     margin: auto;
 }
