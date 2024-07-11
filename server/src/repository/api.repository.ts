@@ -25,7 +25,7 @@ async function findUserByEmailDB(email: string): Promise<iUser[]> {
   const client = await pool.connect();
   const sql: string = 'SELECT * FROM users WHERE email = $1';
   const { rows } = await client.query(sql, [email]);
-
+  client.release();
   return rows;
 }
 

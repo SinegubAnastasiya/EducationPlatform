@@ -1,0 +1,94 @@
+.background {
+    background-color: #F6F5F4;
+    padding-top: 111px;
+    padding-bottom: 110px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.content_left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 572px;
+    height: 374px;
+    border-radius: 14px;
+    background: #FFFFFF;
+    margin-right: 10px;
+}
+
+.discription {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 253px;
+
+}
+
+.image_books {
+    background-image: url('./assets/image\ books.svg');
+    width: 239px;
+    height: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.info h1,
+.tests h1 {
+    font: 800 32px Montserrat;
+    letter-spacing: -0.04em;
+    color: #000000;
+}
+
+.info p {
+    font: 500 16px Montserrat;
+    color: #757575;
+    margin-top: 12px;
+}
+
+.content_left button {
+    width: 165px;
+    height: 44px;
+    padding: 14px 20px;
+    border-radius: 100px;
+    background: #C3DCE3;
+    color: #2B788B;
+    font: 700 16px Montserrat;
+    letter-spacing: -0.04em;
+    margin-bottom: 49px;
+    margin-top: 32px;
+    border-width: 0;
+}
+
+.tests {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 401px;
+    height: 374px;
+    border-radius: 14px;
+    background: #FFFFFF;
+    padding: 40px 73.5px;
+}
+
+.tests p {
+    font: 600 16px Montserrat;
+    color: #000000;
+
+}
