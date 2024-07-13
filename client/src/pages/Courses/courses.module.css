@@ -41,9 +41,7 @@
     margin: auto;
     margin-bottom: 40px;
 
-    .image_1,
-    .image_2,
-    .image_3 {
+    .image {
         background-repeat: no-repeat;
         background-size: contain;
         width: 337px;
@@ -51,17 +49,17 @@
         border-radius: 14px 0px 0px 14px;
     }
 
-    .image_1 {
+    .image {
         background-image: url('./assets/JS.png')
     }
-
+/* 
     .image_2 {
         background-image: url('./assets/TS.png')
     }
 
     .image_3 {
         background-image: url('./assets/JS.png')
-    }
+    } */
 
     h1 {
         width: 209px;

@@ -12,4 +12,10 @@ interface iCourse {
   description?: string;
 }
 
-export { iUser, iCourse };
+interface iLesson {
+  readonly id?: number;
+  title?: string;
+  course_id?: number;
+}
+
+export { iUser, iCourse, iLesson };

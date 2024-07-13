@@ -7,13 +7,15 @@ import { useEffect, useState } from "react"
 
 function SingleCourse() {
     const objectWithId = useParams()
-    console.log(objectWithId);
 
     const [data, setData] = useState([])
+    const [lesson, setLesson] = useState([])
+
     const getCourseById = async () => {
         const response = await axios.get(`http://localhost:3001/course/${objectWithId.id}`)
         setData(response.data)
-        console.log(response.data);
+        const responseLessons = await axios.get(`http://localhost:3001/lesson/${objectWithId.id}`)
+        setLesson(responseLessons.data)
     }
 
     useEffect(() => {
@@ -38,11 +40,7 @@ function SingleCourse() {
                 </div>
                 <div className={style.tests}>
                     <h1>15 lessons</h1>
-                    <p>1. Test</p>
-                    <p>1. Test</p>
-                    <p>1. Test</p>
-                    <p>1. Test</p>
-                    <p>1. Test</p>
+                    {lesson.map((el, i) => <p key={i}>{i+1}. {el.title}</p>) }
                 </div>
             </div>
         </div>

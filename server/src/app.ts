@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import routeUser from './controller/user.controller';
 import routeCourse from './controller/course.controller';
 import routeApi from './controller/api.controller';
+import routeLesson from './controller/lesson.controller'
 import cors from 'cors';
 
 const app = express();
@@ -20,6 +21,7 @@ app.use(bodyParser.json());
 app.use('/user', routeUser);
 app.use('/course', routeCourse);
 app.use('/api', routeApi);
+app.use('/lesson', routeLesson)
 
 app.use((er: any, _req: Request, res: Response, next: NextFunction) => {
   res.send(er.message);

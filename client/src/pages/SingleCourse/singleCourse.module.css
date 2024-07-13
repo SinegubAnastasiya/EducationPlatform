@@ -78,7 +78,8 @@
 .tests {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    gap: 20px;
     align-items: flex-start;
     width: 401px;
     height: 374px;
